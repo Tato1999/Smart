@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ტესტეტსტსყ</title>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+</head>
+<body style="align-items: center; justify-content: center">
+  <div style="width: 300px; height: 300px; background-color:cyan;position:absolute; display:flex; left:50%; top: 50%; transform: translate(-50%, -50%); margin: 0;">
+    <p style=" visibility:hidden; color:red; font-size: 50px;"><b>Did u Love Me?</b></p>
+    
+    <button id="yes" style="width:60px; height:30px; position: absolute; top:70%;left:10%; visibility:visible" onclick="yes()">yes</button>
+    <button id="no"style="width:60px; height:30px; position: absolute; top:70%; left: 66%; visibility:hidden" onclick='No()'>No</button>
+  </div>
+</body>
+  <script type= module>
+  
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js"
+import { collection, getDocs, addDoc, Timestamp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js"
+import { query, orderBy, limit, where, onSnapshot } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js
+
+
+// Required for side-effects
+    
+  const firebaseConfig = {
+    apiKey: "AIzaSyCmMHwu-mJBDnFlYEH56lKk16e2Eko1bc0",
+    authDomain: "quiz-89076.firebaseapp.com",
+    databaseURL: "https://quiz-89076-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "quiz-89076",
+    storageBucket: "quiz-89076.appspot.com",
+    messagingSenderId: "615880784572",
+    appId: "1:615880784572:web:f6008ec10cd89eb65c6eb9",
+    measurementId: "G-7LRN85PCR8"
+  };
+
+  // Initialize Firebase
+  const db = firebase.firestore();
+ 
+ </script>
+  
+  <script>
+  function No(){
+    var test1 = document.getElementById("no");
+    var rend = Math.floor(Math.random()*100);
+    var rend1 = Math.floor(Math.random()*100);
+    test1.style.top = rend + "%";
+    test1.style.left = rend1 + "%";
+    console.log(rend)
+  }
+    function yes(){
+       db.collection('1525').doc('test')
+      .then(()=>{
+         
+       })
+         .catch((error)=>{
+         aler(error)
+       })
+    }
+  </script>
+</html>
